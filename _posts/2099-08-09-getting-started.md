@@ -1,11 +1,11 @@
 ---
 title: Getting Started
 author: cotes
-date: 2019-08-09 20:55:00 +0800
+date: 2099-08-09 20:55:00 +0800
 categories: [Blogging, Tutorial]
 tags: [getting started]
 pin: true
-img_path: '/posts/20180809'
+img_path: "/posts/20180809"
 ---
 
 ## Prerequisites
@@ -18,8 +18,8 @@ Follow the instructions in the [Jekyll Docs](https://jekyllrb.com/docs/installat
 
 There are two ways to create a new repository for this theme:
 
-- [**Using the Chirpy Starter**](#option-1-using-the-chirpy-starter) - Easy to upgrade, isolates irrelevant project files so you can focus on writing.
-- [**GitHub Fork**](#option-2-github-fork) - Convenient for custom development, but difficult to upgrade. Unless you are familiar with Jekyll and are determined to tweak or contribute to this project, this approach is not recommended.
+-   [**Using the Chirpy Starter**](#option-1-using-the-chirpy-starter) - Easy to upgrade, isolates irrelevant project files so you can focus on writing.
+-   [**GitHub Fork**](#option-2-github-fork) - Convenient for custom development, but difficult to upgrade. Unless you are familiar with Jekyll and are determined to tweak or contribute to this project, this approach is not recommended.
 
 #### Option 1. Using the Chirpy Starter
 
@@ -36,7 +36,7 @@ $ bash tools/init
 ```
 
 > If you don't want to deploy your site on GitHub Pages, append option `--no-gh` at the end of the above command.
-{: .prompt-info }
+> {: .prompt-info }
 
 The above command will:
 
@@ -59,10 +59,10 @@ $ bundle
 
 Update the variables of `_config.yml`{: .filepath} as needed. Some of them are typical options:
 
-- `url`
-- `avatar`
-- `timezone`
-- `lang`
+-   `url`
+-   `avatar`
+-   `timezone`
+-   `lang`
 
 ### Social Contact Options
 
@@ -100,18 +100,18 @@ Now you can choose _ONE_ of the following methods to deploy your Jekyll site.
 
 There are a few things to get ready for.
 
-- If you're on the GitHub Free plan, keep your site repository public.
-- If you have committed `Gemfile.lock`{: .filepath} to the repository, and your local machine is not running Linux, go to the root of your site and update the platform list of the lock-file:
+-   If you're on the GitHub Free plan, keep your site repository public.
+-   If you have committed `Gemfile.lock`{: .filepath} to the repository, and your local machine is not running Linux, go to the root of your site and update the platform list of the lock-file:
 
-  ```console
-  $ bundle lock --add-platform x86_64-linux
-  ```
+    ```console
+    $ bundle lock --add-platform x86_64-linux
+    ```
 
 Next, configure the _Pages_ service.
 
 1. Browse to your repository on GitHub. Select the tab _Settings_, then click _Pages_ in the left navigation bar. Then, in the **Source** section (under _Build and deployment_), select [**GitHub Actions**][pages-workflow-src] from the dropdown menu.  
-![Build source](pages-source-light.png){: .light .border .normal w='375' h='140' }
-![Build source](pages-source-dark.png){: .dark .normal w='375' h='140' }
+   ![Build source](pages-source-light.png){: .light .border .normal w='375' h='140' }
+   ![Build source](pages-source-dark.png){: .dark .normal w='375' h='140' }
 
 2. Push any commits to GitHub to trigger the _Actions_ workflow. In the _Actions_ tab of your repository, you should see the workflow _Build and Deploy_ running. Once the build is complete and successful, the site will be deployed automatically.
 

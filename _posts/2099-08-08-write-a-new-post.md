@@ -1,7 +1,7 @@
 ---
 title: Writing a New Post
 author: cotes
-date: 2019-08-08 14:10:00 +0800
+date: 2099-08-08 14:10:00 +0800
 categories: [Blogging, Tutorial]
 tags: [writing]
 render_with_liquid: false
@@ -22,12 +22,12 @@ Basically, you need to fill the [Front Matter](https://jekyllrb.com/docs/front-m
 title: TITLE
 date: YYYY-MM-DD HH:MM:SS +/-TTTT
 categories: [TOP_CATEGORIE, SUB_CATEGORIE]
-tags: [TAG]     # TAG names should always be lowercase
+tags: [TAG] # TAG names should always be lowercase
 ---
 ```
 
 > The posts' _layout_ has been set to `post` by default, so there is no need to add the variable _layout_ in the Front Matter block.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 ### Timezone of Date
 
@@ -52,26 +52,27 @@ Adding author information in `_data/authors.yml` (If your website doesn't have t
 
 ```yaml
 <author_id>:
-  name: <full name>
-  twitter: <twitter_of_author>
-  url: <homepage_of_author>
+    name: <full name>
+    twitter: <twitter_of_author>
+    url: <homepage_of_author>
 ```
-{: file="_data/authors.yml" }
+
+{: file="\_data/authors.yml" }
 
 And then use `author` to specify a single entry or `authors` to specify multiple entries:
 
 ```yaml
 ---
-author: <author_id>                     # for single entry
+author: <author_id> # for single entry
 # or
-authors: [<author1_id>, <author2_id>]   # for multiple entries
+authors: [<author1_id>, <author2_id>] # for multiple entries
 ---
 ```
 
 Having said that, the key `author` can also identify multiple entries.
 
 > The benefit of reading the author information from the file `_data/authors.yml`{: .filepath } is that the page will have the meta tag `twitter:creator`, which enriches the [Twitter Cards](https://developer.twitter.com/en/docs/twitter-for-websites/cards/guides/getting-started#card-and-content-attribution) and is good for SEO.
-{: .prompt-info }
+> {: .prompt-info }
 
 ## Table of Contents
 
@@ -107,11 +108,11 @@ math: true
 
 After enabling the mathematical feature, you can add math equations with the following syntax:
 
-- **Block math** should be added with `$$ math $$` with **mandatory** blank lines before and after `$$`
-  - **Inserting equation numbering** should be added with `$$\begin{equation} math \end{equation}$$`
-  - **Referencing equation numbering** should be done with `\label{eq:label_name}` in the equation block and `\eqref{eq:label_name}` inline with text (see example below)
-- **Inline math** (in lines) should be added with `$$ math $$` without any blank line before or after `$$`
-- **Inline math** (in lists) should be added with `\$$ math $$`
+-   **Block math** should be added with `$$ math $$` with **mandatory** blank lines before and after `$$`
+    -   **Inserting equation numbering** should be added with `$$\begin{equation} math \end{equation}$$`
+    -   **Referencing equation numbering** should be done with `\label{eq:label_name}` in the equation block and `\eqref{eq:label_name}` inline with text (see example below)
+-   **Inline math** (in lines) should be added with `$$ math $$` without any blank line before or after `$$`
+-   **Inline math** (in lists) should be added with `\$$ math $$`
 
 ```markdown
 <!-- Block math, keep all blank lines -->
@@ -152,7 +153,7 @@ mermaid: true
 ---
 ```
 
-Then you can use it like other markdown languages: surround the graph code with ```` ```mermaid ```` and ```` ``` ````.
+Then you can use it like other markdown languages: surround the graph code with ` ```mermaid ` and ` ``` `.
 
 ## Images
 
@@ -164,6 +165,7 @@ Add italics to the next line of an image, then it will become the caption and ap
 ![img-description](/path/to/image)
 _Image Caption_
 ```
+
 {: .nolineno}
 
 ### Size
@@ -173,16 +175,18 @@ In order to prevent the page content layout from shifting when the image is load
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: width="700" height="400" }
 ```
+
 {: .nolineno}
 
 > For an SVG, you have to at least specify its _width_, otherwise it won't be rendered.
-{: .prompt-info }
+> {: .prompt-info }
 
 Starting from _Chirpy v5.0.0_, `height` and `width` support abbreviations (`height` → `h`, `width` → `w`). The following example has the same effect as the above:
 
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: w="700" h="400" }
 ```
+
 {: .nolineno}
 
 ### Position
@@ -190,30 +194,33 @@ Starting from _Chirpy v5.0.0_, `height` and `width` support abbreviations (`heig
 By default, the image is centered, but you can specify the position by using one of the classes `normal`, `left`, and `right`.
 
 > Once the position is specified, the image caption should not be added.
-{: .prompt-warning }
+> {: .prompt-warning }
 
-- **Normal position**
+-   **Normal position**
 
-  Image will be left aligned in below sample:
+    Image will be left aligned in below sample:
 
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png){: .normal }
-  ```
-  {: .nolineno}
+    ```markdown
+    ![Desktop View](/assets/img/sample/mockup.png){: .normal }
+    ```
 
-- **Float to the left**
+    {: .nolineno}
 
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png){: .left }
-  ```
-  {: .nolineno}
+-   **Float to the left**
 
-- **Float to the right**
+    ```markdown
+    ![Desktop View](/assets/img/sample/mockup.png){: .left }
+    ```
 
-  ```markdown
-  ![Desktop View](/assets/img/sample/mockup.png){: .right }
-  ```
-  {: .nolineno}
+    {: .nolineno}
+
+-   **Float to the right**
+
+    ```markdown
+    ![Desktop View](/assets/img/sample/mockup.png){: .right }
+    ```
+
+    {: .nolineno}
 
 ### Dark/Light mode
 
@@ -231,6 +238,7 @@ The screenshots of the program window can be considered to show the shadow effec
 ```markdown
 ![Desktop View](/assets/img/sample/mockup.png){: .shadow }
 ```
+
 {: .nolineno}
 
 ### CDN URL
@@ -240,7 +248,8 @@ If you host the images on the CDN, you can save the time of repeatedly writing t
 ```yaml
 img_cdn: https://cdn.com
 ```
-{: file='_config.yml' .nolineno}
+
+{: file='\_config.yml' .nolineno}
 
 Once `img_cdn` is assigned, the CDN URL will be added to the path of all images (images of site avatar and posts) starting with `/`.
 
@@ -249,6 +258,7 @@ For instance, when using images:
 ```markdown
 ![The flower](/path/to/flower.png)
 ```
+
 {: .nolineno}
 
 The parsing result will automatically add the CDN prefix `https://cdn.com` before the image path:
@@ -256,6 +266,7 @@ The parsing result will automatically add the CDN prefix `https://cdn.com` befor
 ```html
 <img src="https://cdn.com/path/to/flower.png" alt="The flower" />
 ```
+
 {: .nolineno }
 
 ### Image Path
@@ -273,6 +284,7 @@ And then, the image source of Markdown can write the file name directly:
 ```md
 ![The flower](flower.png)
 ```
+
 {: .nolineno }
 
 The output will be:
@@ -280,6 +292,7 @@ The output will be:
 ```html
 <img src="/img/path/flower.png" alt="The flower" />
 ```
+
 {: .nolineno }
 
 ### Preview Image
@@ -291,8 +304,8 @@ Knowing these prerequisites, you can start setting the image's attribute:
 ```yaml
 ---
 image:
-  path: /path/to/image
-  alt: image alternative text
+    path: /path/to/image
+    alt: image alternative text
 ---
 ```
 
@@ -313,7 +326,7 @@ For preview images:
 ```yaml
 ---
 image:
-  lqip: /path/to/lqip-file # or base64 URI
+    lqip: /path/to/lqip-file # or base64 URI
 ---
 ```
 
@@ -324,6 +337,7 @@ For normal images:
 ```markdown
 ![Image description](/path/to/image){: lqip="/path/to/lqip-file" }
 ```
+
 {: .nolineno }
 
 ## Pinned Posts
@@ -342,8 +356,9 @@ There are several types of prompts: `tip`, `info`, `warning`, and `danger`. They
 
 ```md
 > Example line for prompt.
-{: .prompt-info }
+> {: .prompt-info }
 ```
+
 {: .nolineno }
 
 ## Syntax
@@ -353,6 +368,7 @@ There are several types of prompts: `tip`, `info`, `warning`, and `danger`. They
 ```md
 `inline code part`
 ```
+
 {: .nolineno }
 
 ### Filepath Hightlight
@@ -360,11 +376,12 @@ There are several types of prompts: `tip`, `info`, `warning`, and `danger`. They
 ```md
 `/path/to/a/file.extend`{: .filepath}
 ```
+
 {: .nolineno }
 
 ### Code Block
 
-Markdown symbols ```` ``` ```` can easily create a code block as follows:
+Markdown symbols ` ``` ` can easily create a code block as follows:
 
 ````md
 ```
@@ -374,7 +391,7 @@ This is a plaintext code snippet.
 
 #### Specifying Language
 
-Using ```` ```{language} ```` you will get a code block with syntax highlight:
+Using ` ```{language} ` you will get a code block with syntax highlight:
 
 ````markdown
 ```yaml
@@ -383,7 +400,7 @@ key: value
 ````
 
 > The Jekyll tag `{% highlight %}` is not compatible with this theme.
-{: .prompt-danger }
+> {: .prompt-danger }
 
 #### Line Number
 
@@ -393,6 +410,7 @@ By default, all languages except `plaintext`, `console`, and `terminal` will dis
 ```shell
 echo 'No more line numbers!'
 ```
+
 {: .nolineno }
 ````
 
@@ -404,6 +422,7 @@ You may have noticed that the code language will be displayed at the top of the 
 ```shell
 # content
 ```
+
 {: file="path/to/file" }
 ````
 
@@ -413,11 +432,13 @@ If you want to display the **Liquid** snippet, surround the liquid code with `{%
 
 ````markdown
 {% raw %}
+
 ```liquid
 {% if product.title contains 'Pack' %}
   This product's title contains the word Pack.
 {% endif %}
 ```
+
 {% endraw %}
 ````
 
@@ -455,11 +476,11 @@ Where `URL` is an URL to a video file e.g. `/assets/img/sample/video.mp4`.
 
 You can also specify additional attributes for the embedded video file. Here is a full list of attributes allowed.
 
-- `poster='/path/to/poster.png'` - poster image for a video that is shown while video is downloading
-- `title='Text'` - title for a video that appears below the video and looks same as for images
-- `autoplay=true` - video automatically begins to play back as soon as it can
-- `loop=true` - automatically seek back to the start upon reaching the end of the video
-- `muted=true` - audio will be initially silenced
+-   `poster='/path/to/poster.png'` - poster image for a video that is shown while video is downloading
+-   `title='Text'` - title for a video that appears below the video and looks same as for images
+-   `autoplay=true` - video automatically begins to play back as soon as it can
+-   `loop=true` - automatically seek back to the start upon reaching the end of the video
+-   `muted=true` - audio will be initially silenced
 
 Consider an example utilizing all of the above:
 

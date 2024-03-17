@@ -1,16 +1,16 @@
 ---
 title: Text and Typography
 author: cotes
-date: 2019-08-08 11:33:00 +0800
+date: 2099-08-08 11:33:00 +0800
 categories: [Blogging, Demo]
 tags: [typography]
 pin: true
 math: true
 mermaid: true
 image:
-  path: /commons/devices-mockup.png
-  lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
-  alt: Responsive rendering of Chirpy theme on multiple devices.
+    path: /commons/devices-mockup.png
+    lqip: data:image/webp;base64,UklGRpoAAABXRUJQVlA4WAoAAAAQAAAADwAABwAAQUxQSDIAAAARL0AmbZurmr57yyIiqE8oiG0bejIYEQTgqiDA9vqnsUSI6H+oAERp2HZ65qP/VIAWAFZQOCBCAAAA8AEAnQEqEAAIAAVAfCWkAALp8sF8rgRgAP7o9FDvMCkMde9PK7euH5M1m6VWoDXf2FkP3BqV0ZYbO6NA/VFIAAAA
+    alt: Responsive rendering of Chirpy theme on multiple devices.
 ---
 
 This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
@@ -19,17 +19,23 @@ This post is to show Markdown syntax rendering on [**Chirpy**](https://github.co
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
+
 # H1 - heading
+
 {: .mt-4 .mb-0 }
 
 ## H2 - heading
+
 {: data-toc-skip='' .mt-4 .mb-0 }
 
 ### H3 - heading
+
 {: data-toc-skip='' .mt-4 .mb-0 }
 
 #### H4 - heading
+
 {: data-toc-skip='' .mt-4 }
+
 <!-- markdownlint-restore -->
 
 ## Paragraph
@@ -46,16 +52,16 @@ Quisque egestas convallis ipsum, ut sollicitudin risus tincidunt a. Maecenas int
 
 ### Unordered list
 
-- Chapter
-  - Section
-    - Paragraph
+-   Chapter
+    -   Section
+        -   Paragraph
 
 ### ToDo list
 
-- [ ] Job
-  - [x] Step 1
-  - [x] Step 2
-  - [ ] Step 3
+-   [ ] Job
+    -   [x] Step 1
+    -   [x] Step 2
+    -   [ ] Step 3
 
 ### Description list
 
@@ -73,17 +79,19 @@ Moon
 
 <!-- markdownlint-capture -->
 <!-- markdownlint-disable -->
+
 > An example showing the `tip` type prompt.
-{: .prompt-tip }
+> {: .prompt-tip }
 
 > An example showing the `info` type prompt.
-{: .prompt-info }
+> {: .prompt-info }
 
 > An example showing the `warning` type prompt.
-{: .prompt-warning }
+> {: .prompt-warning }
 
 > An example showing the `danger` type prompt.
-{: .prompt-danger }
+> {: .prompt-danger }
+
 <!-- markdownlint-restore -->
 
 ## Tables
@@ -134,7 +142,8 @@ fi;
   "colors/light-typography",
   "colors/dark-typography";
 ```
-{: file='_sass/jekyll-theme-chirpy.scss'}
+
+{: file='\_sass/jekyll-theme-chirpy.scss'}
 
 ## Mathematics
 
