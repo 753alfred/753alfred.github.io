@@ -31,24 +31,30 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
+      # 1) 코드 체크아웃 (기존)
       - name: Checkout
         uses: actions/checkout@v4
+
+      # 2) Ruby 설치 및 Bundler 캐시 (추가)
       - name: Setup Ruby
-        uses: ruby/setup-ruby@8575951200e472d5f2d95c625da0c7bec8217c42 # v1.161.0
+        uses: ruby/setup-ruby@v1
         with:
-          ruby-version: '3.1' # Not needed with a .ruby-version file
-          bundler-cache: true # runs 'bundle install' and caches installed gems automatically
-          cache-version: 0 # Increment this number if you need to re-download cached gems
+          ruby-version: '3.1'
+          bundler-cache: true
+
+      # 3) Pages 환경 설정 (기존)
       - name: Setup Pages
         id: pages
         uses: actions/configure-pages@v4
+
+      # 4) Jekyll 빌드 (기존)
       - name: Build with Jekyll
-        # Outputs to the './_site' directory by default
         run: bundle exec jekyll build --baseurl "${{ steps.pages.outputs.base_path }}"
         env:
           JEKYLL_ENV: production
+
+      # 5) 빌드 결과 업로드 (기존)
       - name: Upload artifact
-        # Automatically uploads an artifact from the './_site' directory by default
         uses: actions/upload-pages-artifact@v3
 
   # Deployment job
